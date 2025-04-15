@@ -1,6 +1,6 @@
 // Configuration de base
 const config = {
-    appId: "2071d93215924d1c81e1bca9b4d594c0", // Remplacer par ton App ID
+    appId: "2071d93215924d1c81e1bca9b4d594c0", // App ID
     channel: "",
     token: null,
     uid: Math.floor(Math.random() * 100000),
@@ -84,7 +84,7 @@ const config = {
     delete remoteUsers[user.uid];
   }
   
-  // 🔧 Fonction pour créer la vidéo distante
+  //Fonction pour créer la vidéo distante
   function addVideoStream(user) {
     const videoContainer = document.createElement("div");
     videoContainer.classList.add("video-placeholder");
