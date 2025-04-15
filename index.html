@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VideoConnect - Appel Vidéo Premium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>VideoConnect</h1>
+            <p class="subtitle">Solution d'appel vidéo haute qualité</p>
+        </header>
+        
+        <div class="control-panel">
+            <div class="input-group">
+                <input type="text" id="channel-name" placeholder="Entrez le nom du canal" required>
+            </div>
+            <button id="join-btn">
+                <i class="fas fa-video"></i> Rejoindre
+            </button>
+            <button id="leave-btn" disabled>
+                <i class="fas fa-phone-slash"></i> Quitter
+            </button>
+        </div>
+        
+        <div id="video-container">
+            <div id="local-video" class="video-placeholder">
+                <span>Votre caméra</span>
+                <div class="user-name">Vous</div>
+            </div>
+            <!-- Les vidéos des autres participants s'ajoute ici -->
+        </div>
+        
+        <div class="controls" style="display: none;">
+            <div class="control-btn" id="mute-btn">
+                <i class="fas fa-microphone"></i>
+            </div>
+            <div class="control-btn" id="video-btn">
+                <i class="fas fa-video"></i>
+            </div>
+            <div class="control-btn" id="screen-share-btn">
+                <i class="fas fa-desktop"></i>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2025 Groupe A - Tous droits réservés</p>
+        </footer>
+    </div>
+</body>
+</html>
