@@ -1,6 +1,6 @@
 // Configuration de base
 const config = {
-    appId: "2071d93215924d1c81e1bca9b4d594c0", // App ID
+    appId: "2071d93215924d1c81e1bca9b4d594c0", 
     channel: "",
     token: null,
     uid: Math.floor(Math.random() * 100000),
@@ -10,7 +10,7 @@ const config = {
   let localTracks = [];
   let remoteUsers = {};
   
-  // DOM Ready
+  
   document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("join-btn").addEventListener("click", joinCall);
     document.getElementById("leave-btn").addEventListener("click", leaveCall);
@@ -24,7 +24,7 @@ const config = {
   
     client = AgoraRTC.createClient({ mode: "rtc", codec: "vp8" });
   
-    // 🔥 Écoute les nouveaux utilisateurs
+    // pour les nouveaux utilisateurs
     client.on("user-published", handleUserPublished);
     client.on("user-unpublished", handleUserUnpublished);
     client.on("user-left", handleUserLeft);
@@ -49,7 +49,7 @@ const config = {
     document.getElementById("join-btn").disabled = false;
     document.getElementById("leave-btn").disabled = true;
   
-    // 🔁 Nettoie les vidéos distantes
+    // Nettoie les vidéos distantes
     Object.keys(remoteUsers).forEach(uid => {
       const el = document.getElementById(`user-${uid}`);
       if (el) el.remove();
